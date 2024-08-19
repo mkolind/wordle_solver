@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle Solver</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <script src="scripts/algorithms.js"></script>
+    <script src="scripts/UI_algorithms.js"></script>
+    <script src="scripts/words.js"></script>
+</head>
+<body>
+    <h1>The Wordle Solver</h1>
+    <div class="container">
+        <div class="left-panel">
+             <ul id="listOfWords">
+             </ul>
+        </div>
+        <div class="middle-panel" id="table-container">
+            <button id="button">Check for words</button>
+        </div>
+        <div class="right-panel">
+            <!-- Right panel content will be inserted here -->
+        </div>
+    </div>
+
+    
+    <script>
+
+        let tableID = "wordle-table"
+
+        document.addEventListener("DOMContentLoaded", function() {
+            buildTable(5, 6, "table-container", tableID);
+            updateWordList("listOfWords", wordsArray);
+        });
+
+        let button = document.getElementById("button");
+        
+        button.addEventListener("click", function(){
+            updateWordList("listOfWords", getWords(tableID, wordsArray));
+        });
+
+    </script>
+</body>
+</html>
