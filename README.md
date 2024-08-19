@@ -17,3 +17,8 @@ This project is a simple Wordle solver built with basic HTML, JavaScript, and CS
 ## Project Status
 
 This project is ongoing, and new features or improvements may be added over time.
+
+## Link to github pages
+
+The wordle solver can be accessed on the following link
+[link](https://mkolind.github.io/wordle_solver/)
